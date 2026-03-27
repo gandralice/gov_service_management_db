@@ -1,0 +1,10 @@
+-- A cidade evoluiu e novos dados são necessários. PASSOS: Adicionar campo email em CIDADAO - Adicionar campo prioridade em OCORRENCIA - Alterar tamanho do campo descricao
+
+ALTER TABLE cidadao
+ADD cd_email_cidadao VARCHAR2(80) UNIQUE;
+
+ALTER TABLE ocorrencia 
+ADD ic_prioridade CHAR(1) CHECK (ic_prioridade IN ('S','N'));
+
+ALTER TABLE ocorrencia
+MODIFY ds_ocorrencia VARCHAR2(200);
