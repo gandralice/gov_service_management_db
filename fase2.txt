@@ -1,0 +1,47 @@
+-- Transformar o modelo lógico em tabelas físicas funcionais. PASSOS: Criar todas as tabelas usando CREATE TABLE. - Definir corretamente os tipos de dados (INT, VARCHAR, DATE, DECIMAL). - Aplicar PK e FK. - Utilizar NOT NULL e UNIQUE quando necessário. - Garantir integridade referencial. - ENTREGAR O SCRIPT
+
+CREATE TABLE cidadao(
+    id_cidadao NUMBER(10) PRIMARY KEY,
+    cd_cpf_cidadao NUMBER(11) NOT NULL UNIQUE,
+    nm_cidadao VARCHAR2(100) NOT NULL,
+    dt_nascimento DATE NOT NULL
+);
+
+CREATE TABLE servico_publico (
+    id_servico NUMBER(10) PRIMARY KEY,
+    nm_servico VARCHAR2(100) NOT NULL,
+    nm_tipo_servico VARCHAR2(100) NOT NULL
+);
+
+-- tabelas que receberão foreign key
+
+CREATE TABLE pagamento (
+    id_pagamento NUMBER(10) PRIMARY KEY,
+    vl_pagamento NUMBER(10,2) NOT NULL,
+    dt_pagamento DATE NOT NULL,
+    id_ocorrencia NUMBER(10) NOT NULL
+);
+
+CREATE TABLE ocorrencia (
+    id_ocorrencia NUMBER(10) PRIMARY KEY,
+    dt_ocorrencia DATE NOT NULL,
+    ds_ocorrencia VARCHAR2(120) NOT NULL,
+    nm_status_ocorrencia VARCHAR2(50) NOT NULL,
+    id_cidadao NUMBER(10) NOT NULL,
+    id_servico NUMBER(10) NOT NULL
+);
+
+ALTER TABLE ocorrencia
+ADD CONSTRAINT ocorrencia_cidadao_fk
+FOREIGN KEY (id_cidadao)
+REFERENCES cidadao(id_cidadao);
+
+ALTER TABLE ocorrencia
+ADD CONSTRAINT ocorrencia_servico_fk
+FOREIGN KEY (id_servico)
+REFERENCES servico_publico(id_servico);
+
+ALTER TABLE pagamento
+ADD CONSTRAINT pagamento_ocorrencia_fk
+FOREIGN KEY (id_ocorrencia)
+REFERENCES ocorrencia(id_ocorrencia);
