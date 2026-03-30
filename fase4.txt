@@ -1,0 +1,42 @@
+-- Popular o banco com dados iniciais. PASSOS: Inserir no mínimo 5 cidadãos - Inserir serviços públicos (saúde, transporte, segurança) - Registrar ocorrências e pagamentos - Obs. Atenção às chaves estrangeiras
+
+-- cidadao
+INSERT INTO cidadao (id_cidadao, cd_cpf_cidadao, nm_cidadao, dt_nascimento, cd_email_cidadao)
+    VALUES (1123456789, 11111111111, 'Alice Gandra', TO_DATE('24/05/2005','DD/MM/YYYY'), 'alice@email.com');
+
+INSERT INTO cidadao (id_cidadao, cd_cpf_cidadao, nm_cidadao, dt_nascimento, cd_email_cidadao)
+    VALUES (2123456789, 11111111112, 'Ana Gandra', TO_DATE('19/09/2012','DD/MM/YYYY'), 'ana@email.com');
+
+INSERT INTO cidadao (id_cidadao, cd_cpf_cidadao, nm_cidadao, dt_nascimento, cd_email_cidadao)
+    VALUES (3123456789, 11111111113, 'Amanda Gandra', TO_DATE('01/09/2012','DD/MM/YYYY'), 'amanda@email.com');
+
+INSERT INTO cidadao (id_cidadao, cd_cpf_cidadao, nm_cidadao, dt_nascimento, cd_email_cidadao)
+    VALUES (4123456789, 11111111114, 'Lola Gandra', TO_DATE('10/10/2014','DD/MM/YYYY'), 'lola@email.com');
+
+INSERT INTO cidadao (id_cidadao, cd_cpf_cidadao, nm_cidadao, dt_nascimento, cd_email_cidadao)
+    VALUES (5123456789, 11111111115, 'Luna Gandra', TO_DATE('22/09/2018','DD/MM/YYYY'), 'luna@email.com');
+
+-- servico
+INSERT INTO servico_publico( id_servico, nm_servico, nm_tipo_servico)
+    VALUES (6123456789, 'BRT intermunicipal', 'transporte');
+
+INSERT INTO servico_publico( id_servico, nm_servico, nm_tipo_servico)
+    VALUES (7123456789, 'Plano Amil', 'saude');
+
+INSERT INTO servico_publico( id_servico, nm_servico, nm_tipo_servico)
+    VALUES (8123456789, 'Policia militar', 'seguranca');
+
+-- ocorrencia
+INSERT INTO ocorrencia( id_ocorrencia, dt_ocorrencia, ds_ocorrencia, nm_status_ocorrencia, id_cidadao, id_servico, ic_prioridade)
+    VALUES (1023456789, TO_DATE('11/03/2026','DD/MM/YYYY'), 'AAAAAAAAAAAAAAAAAAAAAAAAAA', 'pendente', 1123456789, 8123456789, 'S' );
+INSERT INTO ocorrencia (id_ocorrencia, dt_ocorrencia, ds_ocorrencia, nm_status_ocorrencia, id_cidadao, id_servico, ic_prioridade)
+    VALUES (1123456789, TO_DATE('12/03/2026','DD/MM/YYYY'), 'onibus quebrado na rua XXX', 'pendente', 3123456789, 6123456789, 'S');
+INSERT INTO ocorrencia (id_ocorrencia, dt_ocorrencia, ds_ocorrencia, nm_status_ocorrencia, id_cidadao, id_servico, ic_prioridade)
+    VALUES (1223456789, TO_DATE('05/12/2025','DD/MM/YYYY'), 'falta de vacinas no ponto YYY', 'concluido', 4123456789, 7123456789, 'N');
+
+--pagamento
+INSERT INTO pagamento( id_pagamento, vl_pagamento, dt_pagamento, id_ocorrencia)
+    VALUES(2023456789, 10000.00, TO_DATE('07/12/2025','DD/MM/YYYY'), 1223456789);
+
+INSERT INTO pagamento( id_pagamento, vl_pagamento, dt_pagamento, id_ocorrencia)
+    VALUES(2123456789, 2000.70, TO_DATE('12/03/2026','DD/MM/YYYY'), 1023456789);
