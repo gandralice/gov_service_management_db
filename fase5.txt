@@ -1,0 +1,21 @@
+-- Atualizar informações incorretas. PASSOS: Atualizar status de uma ocorrência - Corrigir valor de um pagamento - Atualizar email de um cidadão
+
+DESC OCORRENCIA;
+
+SELECT * FROM OCORRENCIA;
+
+UPDATE OCORRENCIA
+SET nm_status_ocorrencia = 'concluido'
+WHERE id_ocorrencia = 1023456789;
+
+SELECT * FROM PAGAMENTO;
+
+UPDATE PAGAMENTO
+SET vl_pagamento = 3000.85
+WHERE id_pagamento = 2123456789;
+
+SELECT * FROM CIDADAO;
+
+UPDATE CIDADAO
+SET cd_email_cidadao = 'alice.gandra@email.com'
+WHERE id_cidadao = 1123456789;
