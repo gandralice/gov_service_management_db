@@ -1,0 +1,34 @@
+-- Remover dados inválidos. PASSOS: Excluir ocorrência encerrada há mais de 2 anos - Excluir cidadão sem registros associados - OBS. Cuidado com dependências
+
+INSERT INTO OCORRENCIA(
+    id_ocorrencia,
+    dt_ocorrencia, 
+    ds_ocorrencia,
+    nm_status_ocorrencia,
+    id_cidadao,
+    id_servico,
+    ic_prioridade
+)
+VALUES (
+    1323456789,
+    TO_DATE('03/06/2023', 'DD/MM/YYYY'),
+    'falta de medicamento no posto N',
+    'concluido',
+    4123456789,
+    7123456789,
+    'S'
+);
+
+DELETE FROM OCORRENCIA
+WHERE dt_ocorrencia < ADD_MONTHS(SYSDATE, -24);
+
+SELECT * FROM CIDADAO c LEFT JOIN OCORRENCIA o ON c.id_cidadao = o.id_cidadao WHERE o.id_ocorrencia IS NULL;
+
+DELETE FROM CIDADAO
+WHERE id_cidadao IN (
+    SELECT c.id_cidadao
+    FROM CIDADAO c
+    LEFT JOIN OCORRENCIA o
+    ON c.id_cidadao = o.id_cidadao
+    WHERE o.id_ocorrencia IS NULL
+);
