@@ -1,0 +1,24 @@
+-- Analisar dados da cidade. PASSOS: Criar consultas usando: WHERE, AND / OR, BETWEEN, LIKE 
+-- Ocorrências abertas por tipo de serviço; Pagamentos acima de determinado valor;
+-- Listar ocorrências abertas ordenadas por data; Consultar cidadãos cujo nome inicia com determinada letra;
+-- Exibir pagamentos realizados em um intervalo de datas.
+
+--1
+SELECT * FROM OCORRENCIA WHERE nm_status_ocorrencia = 'pendente' AND id_servico = 6123456789;
+SELECT * FROM OCORRENCIA WHERE nm_status_ocorrencia = 'pendente' AND id_servico = 7123456789;
+SELECT * FROM OCORRENCIA WHERE nm_status_ocorrencia = 'pendente' AND id_servico = 8123456789;
+
+SELECT * FROM OCORRENCIA o JOIN servico_publico s ON o.id_servico = s.id_servico WHERE nm_status_ocorrencia = 'pendente';
+
+--2
+SELECT * FROM PAGAMENTO p WHERE vl_pagamento < 4000;
+SELECT * FROM PAGAMENTO p WHERE vl_pagamento BETWEEN 2000 AND 4000;
+
+--3
+SELECT id_ocorrencia, dt_ocorrencia, ds_ocorrencia  FROM OCORRENCIA WHERE nm_status_ocorrencia != 'concluido' ORDER BY dt_ocorrencia;
+
+--4
+SELECT * FROM CIDADAO WHERE nm_cidadao LIKE 'A%';
+
+--5
+SELECT * FROM PAGAMENTO WHERE dt_pagamento BETWEEN TO_DATE('10/03/2026', 'DD/MM/YYYY') AND TO_DATE('15/03/2026', 'DD/MM/YYYY');
