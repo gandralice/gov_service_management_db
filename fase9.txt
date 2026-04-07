@@ -1,0 +1,27 @@
+-- Total de ocorrências por serviço
+
+SELECT s.nm_servico, COUNT(*) AS total_ocorrencias
+FROM ocorrencia o JOIN servico_publico s
+ON o.id_servico = s.id_servico
+GROUP BY s.nm_servico;
+
+-- Valor total arrecadado por tipo de taxa
+
+SELECT SUM(vl_pagamento) AS total, id_ocorrencia
+FROM PAGAMENTO GROUP BY id_ocorrencia;
+
+INSERT INTO PAGAMENTO(id_pagamento, vl_pagamento, dt_pagamento, id_ocorrencia)
+VALUES (2223456789, 200, TO_DATE('12/01/2022', 'DD/MM/YYYY'), 1323456789);
+INSERT INTO PAGAMENTO(id_pagamento, vl_pagamento, dt_pagamento, id_ocorrencia)
+VALUES (2323456789, 700, TO_DATE('13/01/2022', 'DD/MM/YYYY'), 1323456789);
+
+-- Calcular valor total e médio dos pagamentos
+
+SELECT SUM(vl_pagamento) AS vl_total, AVG(vl_pagamento) AS vl_medio FROM PAGAMENTO;
+
+-- exibir apenas seriços com mais de X ocorrencias
+
+SELECT s.nm_servico, COUNT(*) AS total_ocorrencias
+FROM ocorrencia o JOIN servico_publico s
+ON o.id_servico = s.id_servico
+GROUP BY s.nm_servico HAVING COUNT(*) > 1;
