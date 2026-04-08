@@ -1,0 +1,55 @@
+-- Integrar dados de toda a cidade. PASSOS:
+-- Criar consultas com  JOIN.
+-- Criar consultas com LEFT JOIN.
+-- Analisar dados integrados.
+
+--Cidadãos e suas ocorrências
+SELECT c.nm_cidadao, o.ds_ocorrencia FROM CIDADAO c JOIN OCORRENCIA o on c.id_cidadao = o.id_cidadao;
+
+-- Serviços mesmo sem ocorrência
+SELECT s.*, o.id_ocorrencia FROM SERVICO_PUBLICO s LEFT JOIN OCORRENCIA o on s.id_servico = o.id_servico;
+
+INSERT INTO SERVICO_PUBLICO (id_servico, nm_servico, nm_tipo_servico)
+VALUES (8823456789, 'biblioteca municipal', 'educação');
+
+-- Listar cidadãos e suas ocorrências registradas
+SELECT c.id_cidadao, c.nm_cidadao, o.id_ocorrencia FROM CIDADAO c JOIN OCORRENCIA o on c.id_cidadao = o.id_cidadao;
+
+SELECT c.id_cidadao, c.nm_cidadao, COUNT(o.id_ocorrencia) FROM CIDADAO c
+JOIN OCORRENCIA o on c.id_cidadao = o.id_cidadao GROUP BY c.id_cidadao, c.nm_cidadao;
+
+-- Exibir cidadãos que não possuem ocorrências
+SELECT c.nm_cidadao, o.id_ocorrencia FROM CIDADAO c LEFT JOIN OCORRENCIA o ON c.id_cidadao = o.id_cidadao WHERE id_ocorrencia IS NULL;
+
+INSERT INTO CIDADAO (id_cidadao, cd_cpf_cidadao, nm_cidadao, dt_nascimento, cd_email_cidadao)
+VALUES (2123456789, 11111111112, 'Ana Clara', TO_DATE('19/09/2012', 'DD/MM/YYYY'), 'aninha@email.com');
+
+-- Listar serviços públicos e o total de ocorrências associadas
+SELECT s.nm_servico, COUNT(o.id_ocorrencia) FROM SERVICO_PUBLICO s
+LEFT JOIN OCORRENCIA o ON s.id_servico = o.id_servico GROUP BY s.nm_servico;
+
+-- pagamentos por cidadão
+SELECT c.nm_cidadao, COUNT(p.id_pagamento) AS qt_pagamento FROM CIDADAO c
+JOIN OCORRENCIA o ON c.id_cidadao = o.id_cidadao
+JOIN PAGAMENTO p ON o.id_ocorrencia = p.id_ocorrencia
+GROUP BY c.nm_cidadao;
+
+-- ranking vl
+SELECT c.nm_cidadao, SUM(p.vl_pagamento) AS vl_total FROM CIDADAO c
+LEFT JOIN OCORRENCIA o ON c.id_cidadao = o.id_cidadao
+LEFT JOIN PAGAMENTO p ON o.id_ocorrencia = p.id_ocorrencia
+GROUP BY c.nm_cidadao ORDER BY vl_total DESC;
+
+-- ranking qt
+SELECT c.nm_cidadao, COUNT(o.id_ocorrencia) AS qt_ocorrencia FROM CIDADAO c
+JOIN OCORRENCIA o ON c.id_cidadao = o.id_cidadao
+GROUP BY c.nm_cidadao ORDER BY qt_ocorrencia DESC;
+
+-- Criar uma consulta que apresente: Nome do cidadão, Tipo de serviço público, Quantidade de ocorrências, Valor total pago
+SELECT c.nm_cidadao, s.nm_tipo_servico,
+COUNT(o.id_ocorrencia) AS qt_ocorrencia, SUM(p.vl_pagamento) AS vl_total
+FROM SERVICO_PUBLICO s
+LEFT JOIN OCORRENCIA o on s.id_servico = o.id_servico
+LEFT JOIN CIDADAO c ON o.id_cidadao = c.id_cidadao
+LEFT JOIN PAGAMENTO p ON o.id_ocorrencia = p.id_ocorrencia
+GROUP BY c.nm_cidadao, s.nm_tipo_servico;
