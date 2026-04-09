@@ -1,0 +1,8 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<OSDM_Design class="oracle.dbtools.crest.model.design.Design" name="rev" id="939D8826-8F40-AA59-5D13-D3B1504EE1F4" version="3.5">
+<createdBy>gandr</createdBy>
+<createdTime>2026-03-02 17:27:59 UTC</createdTime>
+<ownerDesignName>rev</ownerDesignName>
+<capitalNames>false</capitalNames>
+<designId>939D8826-8F40-AA59-5D13-D3B1504EE1F4</designId>
+</OSDM_Design>
