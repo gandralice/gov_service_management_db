@@ -1,0 +1,17 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<FKIndexAssociation class="oracle.dbtools.crest.model.design.relational.FKIndexAssociation" directorySegmentName="seg_0" id="63F9D706-B661-42CB-FBFA-827591E04C7F" containerWithKeyObject="9BED4FE3-DDFD-CB25-E733-733652B792E2" localFKIndex="A2C615B6-BC3B-6073-FA50-B0A6496D3DAD" name="OCORRENCIA_CIDADAO_FK">
+<createdBy>gandr</createdBy>
+<createdTime>2026-03-02 18:06:53 UTC</createdTime>
+<generatorID>B4F4BD65-050C-35A1-B087-DF2A4B8DF42D</generatorID>
+<ownerDesignName>rev</ownerDesignName>
+<referredTableLongName>CIDADAO</referredTableLongName>
+<deleteRule>NO ACTION</deleteRule>
+<referredTableID>76588725-1155-056F-85CC-1B89393209E3</referredTableID>
+<keyObject>5EF11901-1513-FA49-7DEA-90FA04ED27FF</keyObject>
+<referredKeyID>5EF11901-1513-FA49-7DEA-90FA04ED27FF</referredKeyID>
+<mandatory>true</mandatory>
+<refColNames>id_cidadao</refColNames>
+<transferable>true</transferable>
+<rely>false</rely>
+<columnDependencyConstraintGenerateInDDL>true</columnDependencyConstraintGenerateInDDL>
+</FKIndexAssociation>

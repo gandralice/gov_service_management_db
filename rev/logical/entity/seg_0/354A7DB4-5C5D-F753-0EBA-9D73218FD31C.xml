@@ -1,0 +1,87 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Entity class="oracle.dbtools.crest.model.design.logical.Entity" directorySegmentName="seg_0" id="354A7DB4-5C5D-F753-0EBA-9D73218FD31C" name="PAGAMENTO">
+<createdBy>gandr</createdBy>
+<createdTime>2026-03-02 17:57:22 UTC</createdTime>
+<ownerDesignName>rev</ownerDesignName>
+<engineerTo>
+<item key="0EE2BE8A-E2BA-86C0-2327-17026D0EFCE4" value="true"/>
+</engineerTo>
+<adequatelyNormalized>NO</adequatelyNormalized>
+<expectedVolumes>0</expectedVolumes>
+<fwdEngineeringStrategyName>Single Table</fwdEngineeringStrategyName>
+<growthPercent>0</growthPercent>
+<growthType>Year</growthType>
+<maxVolumes>9999999</maxVolumes>
+<minVolumes>0</minVolumes>
+<normalForm>Third</normalForm>
+<attributes itemClass="oracle.dbtools.crest.model.design.logical.Attribute">
+<Attribute name="id_pagamento" id="5D183EAF-424B-66CA-68DF-72E9BE02F6D3">
+<createdBy>gandr</createdBy>
+<createdTime>2026-03-02 17:57:37 UTC</createdTime>
+<ownerDesignName>rev</ownerDesignName>
+<engineerTo>
+<item key="0EE2BE8A-E2BA-86C0-2327-17026D0EFCE4" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>10</dataTypePrecision>
+<ownDataTypeParameters>,10,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="vl_pagamento" id="C5EBAFC6-7AC7-E66F-4536-C91FB3FFD3E1">
+<createdBy>gandr</createdBy>
+<createdTime>2026-03-02 17:57:53 UTC</createdTime>
+<ownerDesignName>rev</ownerDesignName>
+<engineerTo>
+<item key="0EE2BE8A-E2BA-86C0-2327-17026D0EFCE4" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>10</dataTypePrecision>
+<dataTypeScale>2</dataTypeScale>
+<ownDataTypeParameters>,10,2</ownDataTypeParameters>
+</Attribute>
+<Attribute name="dt_pagamento" id="F76F2D53-0E62-9464-08FD-38C71B64B582">
+<createdBy>gandr</createdBy>
+<createdTime>2026-03-02 17:58:21 UTC</createdTime>
+<ownerDesignName>rev</ownerDesignName>
+<engineerTo>
+<item key="0EE2BE8A-E2BA-86C0-2327-17026D0EFCE4" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT007</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="id_ocorrencia" id="984C5490-2A82-9586-42D6-04F8B86A1521">
+<createdBy>gandr</createdBy>
+<createdTime>2026-03-02 17:59:53 UTC</createdTime>
+<generatorID>881F8F02-2F6F-0E1D-53B0-E29F0E89C8A4</generatorID>
+<ownerDesignName>rev</ownerDesignName>
+<engineerTo>
+<item key="0EE2BE8A-E2BA-86C0-2327-17026D0EFCE4" value="true"/>
+</engineerTo>
+<referedAttribute>E8FB94DD-3ED5-B601-01D4-AAD0B45FFD4E</referedAttribute>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>10</dataTypePrecision>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+</attributes>
+<identifiers itemClass="oracle.dbtools.crest.model.design.logical.CandidateKey">
+<identifier id="BAC43BD8-45F3-B9ED-8D2F-1BA95363B4A7" name="PAGAMENTO PK">
+<createdBy>gandr</createdBy>
+<createdTime>2026-03-02 17:57:52 UTC</createdTime>
+<ownerDesignName>rev</ownerDesignName>
+<engineerTo>
+<item key="0EE2BE8A-E2BA-86C0-2327-17026D0EFCE4" value="true"/>
+</engineerTo>
+<pk>true</pk>
+<usedAttributes>
+<attributeRef>5D183EAF-424B-66CA-68DF-72E9BE02F6D3</attributeRef>
+</usedAttributes>
+</identifier>
+</identifiers>
+</Entity>

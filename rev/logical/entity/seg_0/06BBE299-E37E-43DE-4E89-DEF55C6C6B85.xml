@@ -1,0 +1,72 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Entity class="oracle.dbtools.crest.model.design.logical.Entity" directorySegmentName="seg_0" id="06BBE299-E37E-43DE-4E89-DEF55C6C6B85" name="SERVICO_PUBLICO">
+<createdBy>gandr</createdBy>
+<createdTime>2026-03-02 17:32:20 UTC</createdTime>
+<ownerDesignName>rev</ownerDesignName>
+<engineerTo>
+<item key="0EE2BE8A-E2BA-86C0-2327-17026D0EFCE4" value="true"/>
+</engineerTo>
+<adequatelyNormalized>NO</adequatelyNormalized>
+<expectedVolumes>0</expectedVolumes>
+<fwdEngineeringStrategyName>Single Table</fwdEngineeringStrategyName>
+<growthPercent>0</growthPercent>
+<growthType>Year</growthType>
+<maxVolumes>9999999</maxVolumes>
+<minVolumes>0</minVolumes>
+<normalForm>Third</normalForm>
+<attributes itemClass="oracle.dbtools.crest.model.design.logical.Attribute">
+<Attribute name="id_servico" id="926E73A4-940D-B1C6-B3AC-4BA0318FBB6B">
+<createdBy>gandr</createdBy>
+<createdTime>2026-03-02 17:32:41 UTC</createdTime>
+<ownerDesignName>rev</ownerDesignName>
+<engineerTo>
+<item key="0EE2BE8A-E2BA-86C0-2327-17026D0EFCE4" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>10</dataTypePrecision>
+<ownDataTypeParameters>,10,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="nm_servico" id="97B86E80-D27E-2CA6-3587-8D2F2A5D6666">
+<createdBy>gandr</createdBy>
+<createdTime>2026-03-02 17:33:03 UTC</createdTime>
+<ownerDesignName>rev</ownerDesignName>
+<engineerTo>
+<item key="0EE2BE8A-E2BA-86C0-2327-17026D0EFCE4" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>100 CHAR</dataTypeSize>
+<ownDataTypeParameters>100 CHAR,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="nm_tipo_servico" id="5DDE5347-3288-5410-1A46-988869513024">
+<createdBy>gandr</createdBy>
+<createdTime>2026-03-02 17:33:27 UTC</createdTime>
+<ownerDesignName>rev</ownerDesignName>
+<engineerTo>
+<item key="0EE2BE8A-E2BA-86C0-2327-17026D0EFCE4" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>100 CHAR</dataTypeSize>
+<ownDataTypeParameters>100 CHAR,,</ownDataTypeParameters>
+</Attribute>
+</attributes>
+<identifiers itemClass="oracle.dbtools.crest.model.design.logical.CandidateKey">
+<identifier id="D56E3F7A-3D2A-F322-9CA2-C8699E03EE88" name="SERVICO_PUBLICO PK">
+<createdBy>gandr</createdBy>
+<createdTime>2026-03-02 17:33:01 UTC</createdTime>
+<ownerDesignName>rev</ownerDesignName>
+<engineerTo>
+<item key="0EE2BE8A-E2BA-86C0-2327-17026D0EFCE4" value="true"/>
+</engineerTo>
+<pk>true</pk>
+<usedAttributes>
+<attributeRef>926E73A4-940D-B1C6-B3AC-4BA0318FBB6B</attributeRef>
+</usedAttributes>
+</identifier>
+</identifiers>
+</Entity>

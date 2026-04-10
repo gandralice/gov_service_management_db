@@ -1,0 +1,89 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="3D6B12DA-5085-59EF-69A1-014D3DCCF028" name="PAGAMENTO">
+<createdBy>gandr</createdBy>
+<createdTime>2026-03-02 18:06:53 UTC</createdTime>
+<generatorID>354A7DB4-5C5D-F753-0EBA-9D73218FD31C</generatorID>
+<ownerDesignName>rev</ownerDesignName>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="id_pagamento" id="2B86BFB8-4727-F9C0-7153-C0CA060190A0">
+<createdBy>gandr</createdBy>
+<createdTime>2026-03-02 18:06:53 UTC</createdTime>
+<generatorID>5D183EAF-424B-66CA-68DF-72E9BE02F6D3</generatorID>
+<ownerDesignName>rev</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>10</dataTypePrecision>
+<ownDataTypeParameters>,10,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="vl_pagamento" id="EA976636-1BAF-7D19-B743-CE68444503F3">
+<createdBy>gandr</createdBy>
+<createdTime>2026-03-02 18:06:53 UTC</createdTime>
+<generatorID>C5EBAFC6-7AC7-E66F-4536-C91FB3FFD3E1</generatorID>
+<ownerDesignName>rev</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>10</dataTypePrecision>
+<dataTypeScale>2</dataTypeScale>
+<ownDataTypeParameters>,10,2</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="dt_pagamento" id="E15A8D3F-8B0E-7B86-C38D-818A42D99FCA">
+<createdBy>gandr</createdBy>
+<createdTime>2026-03-02 18:06:53 UTC</createdTime>
+<generatorID>F76F2D53-0E62-9464-08FD-38C71B64B582</generatorID>
+<ownerDesignName>rev</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT007</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="OCORRENCIA_id_ocorrencia" id="89EA181D-8475-1C70-D5DD-89945495A8BE">
+<createdBy>gandr</createdBy>
+<createdTime>2026-03-02 18:06:53 UTC</createdTime>
+<generatorID>984C5490-2A82-9586-42D6-04F8B86A1521</generatorID>
+<ownerDesignName>rev</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>10</dataTypePrecision>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="6DB993FF-1185-5C54-C729-932385E19330" referredColumn="E202D588-BE1F-6482-F5DA-6B968D5584F4"/>
+</associations>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="D3E84BD9-FE9C-13C7-535C-6C94088B798B" name="PAGAMENTO_PK">
+<createdBy>gandr</createdBy>
+<createdTime>2026-03-02 18:06:53 UTC</createdTime>
+<generatorID>BAC43BD8-45F3-B9ED-8D2F-1BA95363B4A7</generatorID>
+<ownerDesignName>rev</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="2B86BFB8-4727-F9C0-7153-C0CA060190A0"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="EE81E648-6FBB-69D5-3CFD-3F9B2B0502C3" name="PAGAMENTO_OCORRENCIA_FK">
+<createdBy>gandr</createdBy>
+<createdTime>2026-03-02 18:06:53 UTC</createdTime>
+<generatorID>881F8F02-2F6F-0E1D-53B0-E29F0E89C8A4</generatorID>
+<ownerDesignName>rev</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="89EA181D-8475-1C70-D5DD-89945495A8BE"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

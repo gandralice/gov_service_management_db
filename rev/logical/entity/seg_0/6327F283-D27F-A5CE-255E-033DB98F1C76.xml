@@ -1,0 +1,84 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Entity class="oracle.dbtools.crest.model.design.logical.Entity" directorySegmentName="seg_0" id="6327F283-D27F-A5CE-255E-033DB98F1C76" name="CIDADAO">
+<createdBy>gandr</createdBy>
+<createdTime>2026-03-02 17:28:40 UTC</createdTime>
+<ownerDesignName>rev</ownerDesignName>
+<engineerTo>
+<item key="0EE2BE8A-E2BA-86C0-2327-17026D0EFCE4" value="true"/>
+</engineerTo>
+<adequatelyNormalized>NO</adequatelyNormalized>
+<expectedVolumes>0</expectedVolumes>
+<fwdEngineeringStrategyName>Single Table</fwdEngineeringStrategyName>
+<growthPercent>0</growthPercent>
+<growthType>Year</growthType>
+<maxVolumes>9999999</maxVolumes>
+<minVolumes>0</minVolumes>
+<normalForm>Third</normalForm>
+<attributes itemClass="oracle.dbtools.crest.model.design.logical.Attribute">
+<Attribute name="id_cidadao" id="9C4B75A3-DD48-3537-4BC1-E72C850B7431">
+<createdBy>gandr</createdBy>
+<createdTime>2026-03-02 17:29:03 UTC</createdTime>
+<ownerDesignName>rev</ownerDesignName>
+<engineerTo>
+<item key="0EE2BE8A-E2BA-86C0-2327-17026D0EFCE4" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>10</dataTypePrecision>
+<ownDataTypeParameters>,10,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="cd_cpf_cidadao" id="7660E0AC-C8F2-EB41-AC8A-15356DA53775">
+<createdBy>gandr</createdBy>
+<createdTime>2026-03-02 17:30:13 UTC</createdTime>
+<ownerDesignName>rev</ownerDesignName>
+<engineerTo>
+<item key="0EE2BE8A-E2BA-86C0-2327-17026D0EFCE4" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>11</dataTypePrecision>
+<ownDataTypeParameters>,11,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="nm_cidadao" id="3CEAF64C-F816-4CE8-F7D6-3457E1625575">
+<createdBy>gandr</createdBy>
+<createdTime>2026-03-02 17:29:49 UTC</createdTime>
+<ownerDesignName>rev</ownerDesignName>
+<engineerTo>
+<item key="0EE2BE8A-E2BA-86C0-2327-17026D0EFCE4" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>100 CHAR</dataTypeSize>
+<ownDataTypeParameters>100 CHAR,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="dt_nascimento" id="E5CF4E59-4198-7865-C5F3-6DC202313CC3">
+<createdBy>gandr</createdBy>
+<createdTime>2026-03-02 17:31:54 UTC</createdTime>
+<ownerDesignName>rev</ownerDesignName>
+<engineerTo>
+<item key="0EE2BE8A-E2BA-86C0-2327-17026D0EFCE4" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT007</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+</attributes>
+<identifiers itemClass="oracle.dbtools.crest.model.design.logical.CandidateKey">
+<identifier id="4251D1B8-8F94-FEDB-DF72-C33B48979C88" name="CIDADAO PK">
+<createdBy>gandr</createdBy>
+<createdTime>2026-03-02 17:29:44 UTC</createdTime>
+<ownerDesignName>rev</ownerDesignName>
+<engineerTo>
+<item key="0EE2BE8A-E2BA-86C0-2327-17026D0EFCE4" value="true"/>
+</engineerTo>
+<pk>true</pk>
+<usedAttributes>
+<attributeRef>9C4B75A3-DD48-3537-4BC1-E72C850B7431</attributeRef>
+</usedAttributes>
+</identifier>
+</identifiers>
+</Entity>

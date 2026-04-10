@@ -1,0 +1,114 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Entity class="oracle.dbtools.crest.model.design.logical.Entity" directorySegmentName="seg_0" id="6AA131AE-A193-FC9E-1B8A-03B915160FC3" name="OCORRENCIA">
+<createdBy>gandr</createdBy>
+<createdTime>2026-03-02 17:34:23 UTC</createdTime>
+<ownerDesignName>rev</ownerDesignName>
+<engineerTo>
+<item key="0EE2BE8A-E2BA-86C0-2327-17026D0EFCE4" value="true"/>
+</engineerTo>
+<adequatelyNormalized>NO</adequatelyNormalized>
+<expectedVolumes>0</expectedVolumes>
+<fwdEngineeringStrategyName>Single Table</fwdEngineeringStrategyName>
+<growthPercent>0</growthPercent>
+<growthType>Year</growthType>
+<maxVolumes>9999999</maxVolumes>
+<minVolumes>0</minVolumes>
+<normalForm>Third</normalForm>
+<attributes itemClass="oracle.dbtools.crest.model.design.logical.Attribute">
+<Attribute name="id_ocorrencia" id="E8FB94DD-3ED5-B601-01D4-AAD0B45FFD4E">
+<createdBy>gandr</createdBy>
+<createdTime>2026-03-02 17:34:33 UTC</createdTime>
+<ownerDesignName>rev</ownerDesignName>
+<engineerTo>
+<item key="0EE2BE8A-E2BA-86C0-2327-17026D0EFCE4" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>10</dataTypePrecision>
+<ownDataTypeParameters>,10,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="dt_ocorrencia" id="33D6B5FF-39EE-D375-8C08-1878BE2C791E">
+<createdBy>gandr</createdBy>
+<createdTime>2026-03-02 17:34:54 UTC</createdTime>
+<ownerDesignName>rev</ownerDesignName>
+<engineerTo>
+<item key="0EE2BE8A-E2BA-86C0-2327-17026D0EFCE4" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT007</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="ds_ocorrencia" id="4CFCF73C-6E63-F600-B0D6-8ACFEFBFC57C">
+<createdBy>gandr</createdBy>
+<createdTime>2026-03-02 17:35:08 UTC</createdTime>
+<ownerDesignName>rev</ownerDesignName>
+<engineerTo>
+<item key="0EE2BE8A-E2BA-86C0-2327-17026D0EFCE4" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>120 CHAR</dataTypeSize>
+<ownDataTypeParameters>120 CHAR,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="nm_status_ocorrencia" id="63EAC9B5-96DF-237B-89BD-D0658C6C84B0">
+<createdBy>gandr</createdBy>
+<createdTime>2026-03-02 17:35:31 UTC</createdTime>
+<ownerDesignName>rev</ownerDesignName>
+<engineerTo>
+<item key="0EE2BE8A-E2BA-86C0-2327-17026D0EFCE4" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>50 CHAR</dataTypeSize>
+<ownDataTypeParameters>50 CHAR,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="id_cidadao" id="EC8BD092-0CC6-5287-0395-2E42831642C3">
+<createdBy>gandr</createdBy>
+<createdTime>2026-03-02 17:40:54 UTC</createdTime>
+<generatorID>B4F4BD65-050C-35A1-B087-DF2A4B8DF42D</generatorID>
+<ownerDesignName>rev</ownerDesignName>
+<engineerTo>
+<item key="0EE2BE8A-E2BA-86C0-2327-17026D0EFCE4" value="true"/>
+</engineerTo>
+<referedAttribute>9C4B75A3-DD48-3537-4BC1-E72C850B7431</referedAttribute>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>10</dataTypePrecision>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="id_servico" id="8135FA53-B9EF-6453-E5FC-1F9906ADC376">
+<createdBy>gandr</createdBy>
+<createdTime>2026-03-02 17:41:11 UTC</createdTime>
+<generatorID>A9BE9FA0-20D5-C3E0-0E8F-A432AB874101</generatorID>
+<ownerDesignName>rev</ownerDesignName>
+<engineerTo>
+<item key="0EE2BE8A-E2BA-86C0-2327-17026D0EFCE4" value="true"/>
+</engineerTo>
+<referedAttribute>926E73A4-940D-B1C6-B3AC-4BA0318FBB6B</referedAttribute>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>10</dataTypePrecision>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+</attributes>
+<identifiers itemClass="oracle.dbtools.crest.model.design.logical.CandidateKey">
+<identifier id="452246E0-CC30-DC27-B582-0E3E2BF00A71" name="OCORRENCIA PK">
+<createdBy>gandr</createdBy>
+<createdTime>2026-03-02 17:34:52 UTC</createdTime>
+<ownerDesignName>rev</ownerDesignName>
+<engineerTo>
+<item key="0EE2BE8A-E2BA-86C0-2327-17026D0EFCE4" value="true"/>
+</engineerTo>
+<pk>true</pk>
+<usedAttributes>
+<attributeRef>E8FB94DD-3ED5-B601-01D4-AAD0B45FFD4E</attributeRef>
+</usedAttributes>
+</identifier>
+</identifiers>
+</Entity>

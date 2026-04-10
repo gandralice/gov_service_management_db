@@ -1,0 +1,62 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="2DC2A2B5-DE18-382E-20B1-004CDAC7D561" name="SERVICO_PUBLICO">
+<createdBy>gandr</createdBy>
+<createdTime>2026-03-02 18:06:53 UTC</createdTime>
+<generatorID>06BBE299-E37E-43DE-4E89-DEF55C6C6B85</generatorID>
+<ownerDesignName>rev</ownerDesignName>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="id_servico" id="B7ABAA69-BF40-0B15-19B0-2CF6ED3C23BF">
+<createdBy>gandr</createdBy>
+<createdTime>2026-03-02 18:06:53 UTC</createdTime>
+<generatorID>926E73A4-940D-B1C6-B3AC-4BA0318FBB6B</generatorID>
+<ownerDesignName>rev</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>10</dataTypePrecision>
+<ownDataTypeParameters>,10,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="nm_servico" id="A44DFB16-D9B1-D953-0361-091E6A268D8C">
+<createdBy>gandr</createdBy>
+<createdTime>2026-03-02 18:06:53 UTC</createdTime>
+<generatorID>97B86E80-D27E-2CA6-3587-8D2F2A5D6666</generatorID>
+<ownerDesignName>rev</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>100 CHAR</dataTypeSize>
+<ownDataTypeParameters>100 CHAR,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="nm_tipo_servico" id="15C9665E-8711-9B37-FA93-FBABC0F9E78C">
+<createdBy>gandr</createdBy>
+<createdTime>2026-03-02 18:06:53 UTC</createdTime>
+<generatorID>5DDE5347-3288-5410-1A46-988869513024</generatorID>
+<ownerDesignName>rev</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>100 CHAR</dataTypeSize>
+<ownDataTypeParameters>100 CHAR,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="872DE4B1-D724-EF6C-6406-0B8FE6931DA7" name="SERVICO_PUBLICO_PK">
+<createdBy>gandr</createdBy>
+<createdTime>2026-03-02 18:06:53 UTC</createdTime>
+<generatorID>D56E3F7A-3D2A-F322-9CA2-C8699E03EE88</generatorID>
+<ownerDesignName>rev</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="B7ABAA69-BF40-0B15-19B0-2CF6ED3C23BF"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

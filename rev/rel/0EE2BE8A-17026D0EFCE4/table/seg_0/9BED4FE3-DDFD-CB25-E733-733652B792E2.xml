@@ -1,0 +1,127 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="9BED4FE3-DDFD-CB25-E733-733652B792E2" name="OCORRENCIA">
+<createdBy>gandr</createdBy>
+<createdTime>2026-03-02 18:06:53 UTC</createdTime>
+<generatorID>6AA131AE-A193-FC9E-1B8A-03B915160FC3</generatorID>
+<ownerDesignName>rev</ownerDesignName>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="id_ocorrencia" id="E202D588-BE1F-6482-F5DA-6B968D5584F4">
+<createdBy>gandr</createdBy>
+<createdTime>2026-03-02 18:06:53 UTC</createdTime>
+<generatorID>E8FB94DD-3ED5-B601-01D4-AAD0B45FFD4E</generatorID>
+<ownerDesignName>rev</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>10</dataTypePrecision>
+<ownDataTypeParameters>,10,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="dt_ocorrencia" id="3B9BDB63-F7C4-27B5-DBBC-9ABC43852706">
+<createdBy>gandr</createdBy>
+<createdTime>2026-03-02 18:06:53 UTC</createdTime>
+<generatorID>33D6B5FF-39EE-D375-8C08-1878BE2C791E</generatorID>
+<ownerDesignName>rev</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT007</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="ds_ocorrencia" id="FFCA262B-EA21-43B9-74C3-9EC81D910003">
+<createdBy>gandr</createdBy>
+<createdTime>2026-03-02 18:06:53 UTC</createdTime>
+<generatorID>4CFCF73C-6E63-F600-B0D6-8ACFEFBFC57C</generatorID>
+<ownerDesignName>rev</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>120 CHAR</dataTypeSize>
+<ownDataTypeParameters>120 CHAR,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="nm_status_ocorrencia" id="CA885DFD-5128-E40A-FDBD-522DA851DDE4">
+<createdBy>gandr</createdBy>
+<createdTime>2026-03-02 18:06:53 UTC</createdTime>
+<generatorID>63EAC9B5-96DF-237B-89BD-D0658C6C84B0</generatorID>
+<ownerDesignName>rev</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>50 CHAR</dataTypeSize>
+<ownDataTypeParameters>50 CHAR,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="CIDADAO_id_cidadao" id="4D6391BD-ABA4-727B-B6C7-D7BD3748E20F">
+<createdBy>gandr</createdBy>
+<createdTime>2026-03-02 18:06:53 UTC</createdTime>
+<generatorID>EC8BD092-0CC6-5287-0395-2E42831642C3</generatorID>
+<ownerDesignName>rev</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>10</dataTypePrecision>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="63F9D706-B661-42CB-FBFA-827591E04C7F" referredColumn="A9736F91-1CC4-7A69-013F-DDE8F3583D51"/>
+</associations>
+</Column>
+<Column name="SERVICO_PUBLICO_id_servico" id="026ECA33-FE98-94A1-3AB5-765DEB56BD7E">
+<createdBy>gandr</createdBy>
+<createdTime>2026-03-02 18:06:53 UTC</createdTime>
+<generatorID>8135FA53-B9EF-6453-E5FC-1F9906ADC376</generatorID>
+<ownerDesignName>rev</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>10</dataTypePrecision>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="45089AB0-C5C8-31F0-0E19-9C58B5807064" referredColumn="B7ABAA69-BF40-0B15-19B0-2CF6ED3C23BF"/>
+</associations>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="1D0ACD9F-A166-9A42-1A91-2BF042A60C42" name="OCORRENCIA_PK">
+<createdBy>gandr</createdBy>
+<createdTime>2026-03-02 18:06:53 UTC</createdTime>
+<generatorID>452246E0-CC30-DC27-B582-0E3E2BF00A71</generatorID>
+<ownerDesignName>rev</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="E202D588-BE1F-6482-F5DA-6B968D5584F4"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="A2C615B6-BC3B-6073-FA50-B0A6496D3DAD" name="OCORRENCIA_CIDADAO_FK">
+<createdBy>gandr</createdBy>
+<createdTime>2026-03-02 18:06:53 UTC</createdTime>
+<generatorID>B4F4BD65-050C-35A1-B087-DF2A4B8DF42D</generatorID>
+<ownerDesignName>rev</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="4D6391BD-ABA4-727B-B6C7-D7BD3748E20F"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="E5F7DD8A-D6B2-D5F8-2FDF-11CA08216414" name="OCORRENCIA_SERVICO_PUBLICO_FK">
+<createdBy>gandr</createdBy>
+<createdTime>2026-03-02 18:06:53 UTC</createdTime>
+<generatorID>A9BE9FA0-20D5-C3E0-0E8F-A432AB874101</generatorID>
+<ownerDesignName>rev</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="026ECA33-FE98-94A1-3AB5-765DEB56BD7E"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>
